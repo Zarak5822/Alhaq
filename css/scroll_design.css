@@ -1,0 +1,15 @@
+/* CSS Document */
+
+::-webkit-scrollbar {
+width: 18px;
+height: 15px;
+}
+::-webkit-scrollbar-track-piece  {
+background-color:#CCC;}
+::-webkit-scrollbar-thumb:vertical {
+height: 30px;
+border-radius:20px;
+background-color:#069;}
+::-webkit-scrollbar-thumb:hover{
+height: 30px;
+background-color:#036;}

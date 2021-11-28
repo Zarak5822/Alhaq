@@ -1,0 +1,170 @@
+<style>
+
+.zark{
+	margin-top:-40px;
+	margin-left:40px;
+ width:80%;
+  padding:10px;
+   border:0;
+    border-bottom:4px solid #999; 
+ outline:none;}
+ .btn{
+	 width:100%;
+	  padding:10px;
+	   
+	    color:#FFF; 
+	 border:none;
+	 border-radius:5px;
+	font-family:Roboto;
+	font-size:20px;
+	margin-right:7px;
+	margin-top:25px;
+	 }
+.btn:hover{
+	color:#FFF;
+
+	transition:0.5s all linear;
+	outline:none;
+	
+	}
+.head1{
+
+ text-align:center; 
+ font-family:Roboto;
+ 
+ font-size:35px;
+ color:#FFF;
+ 
+}
+.head2{
+	color:#FFF;
+	font-size:24px;}
+.zark1{
+	margin:20px 0;
+}
+.account1{
+	color:#FC6;}	
+.check2{
+	margin-left:120px;}
+.table1{
+	margin-left:50px;}
+.eml1{
+	font-family:Roboto;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+}
+.pas1{font-family:Roboto;
+	font-size:24px;
+	font-weight:bold;
+	color:#FFF;
+	}
+.box1{
+	font-size:20px;
+	width:250px;
+	height:30px;
+	border-radius:2px;
+	
+	}
+.logo{
+	color:#FFF;
+	font-size:18px;}
+.box2{
+	font-size:20px;
+	width:250px;
+	height:30px;}
+.check1{
+	float:left;
+	color:#FFF;}
+.zark3{
+	margin-top:-40px;
+	margin-left:40px;
+ width:80%;
+  padding:10px;
+   border:0;
+    border-bottom:2px solid #999; 
+ outline:none;}
+.box3{
+	
+	width:50%;
+	height:40px;
+	margin-left:60px;
+	border-radius:5px;
+	color:#FFF;
+	background-color:#36C;
+	outline:none;
+	}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+</style>
