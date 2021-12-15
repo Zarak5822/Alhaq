@@ -1,432 +1,490 @@
-<!doctype html>
-<html>
+<?php
+require 'connection.php';
+
+$sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+$result = $con->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta content="text/html; charset=utf-8" http-equiv=Content-Type>
-<title>Alhaq دارالافتاء</title>
-<link href="css/animate.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/lightbox.min.css" rel="stylesheet">
-<link href="css/hover-min.css" rel="stylesheet">
-<link href="css/imagehover.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/scroll_design.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/sscrol.js"></script>
-<script src="js/wow.min.js"></script>
-
-<style>
-body{
-  margin:0 0 0 0;
-  
-  
-}
-
-.sign{
-	display:none;}
-	
-.pizz1{
-	margin-left:50px;
-	font-family:Roboto;
-	font-weight:bold;
-}
-.font2{
-	font-family:Roboto;
-	font-size:35px;
-	text-align:center;}
-.text1{
-	float:right;
-	margin-right:10px;}
-.box1{
-	background-color:#666;}
-.pizz2{
-	margin-left:25px;
-	font-family:Roboto;
-	font-weight:bold;}
-pizz3{
-	text-align:center;}	
-.font1{
-	font-weight:bold;}
-.zak1{text-align:center;}
-header{
-	width:100%;
-	background-color:#03F;}
-.head1{
-	text-align:center;
-	font-family:Roboto;
-	margin-top:20px;
-	font-size:15px;
-	
-	
-	}
-	
-	.nav1 ul li a{
-		color:#FFF;
-		font-size:18px;
-		
-		font-family: UnitedSans,tahoma,helvetica,arial,sans-serif!important;
-		
-	}
-	.nav1 ul li a:hover{
-		color:#CCC;
-		background-color:#03F;}	
-		
-		background-color:#CCC;}	
-	
-.za1{
-	float:right;
-	margin-top:-3px;
-	margin-right:-10px;
-	font-family:Roboto;
-	font-size:20px;
-	color: #fed75f;}
-.jum1{
-	background-color:#999;}
-.font1{
-	background-color:#666;}
-	body{
-		margin:0px;
-		padding:0px;
-		}
-		.content {
-    background:url(images/slider-bg.jpg) no-repeat top;
-background-size: cover;
-    padding: 120px 0;
-		}
-		
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/stylefatwa.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
 </head>
+<style>
+    img.logo {
+  width: 51%;
+  margin-left: 6em;
+}
 
-<body>
-<div class="logo">
+    </style>
+<body style="font-family: Urdu Nastaliq Unicode">
 <div class="container">
-<div class="row">
-<div class="col-md-4 col-lg-4 col-sm-4">
-<center>
-<h1 style="font-family:Robotto;  color:#000; margin-top:45px;" title="Al-Haq Scholar's Academy">Alhaq Scholar's Acadmey</h1>
-</center>
-</div>
-
-<div class="col-md-4 col-lg-4 col-md-4">
-<center>
-<a href=""><img src="images/logo.jpg" height="170" width="170" class="img-circle "  style="margin-top:13px;  margin-bottom:13px;" title="Al-Haq Scholar's Academy"></a>
-</center>
-</div>
-<div class="col-md-4 col-lg-4 col-sm-4">
-<center>
-
-<img src="img/facebook-icon.png" class="img-circle" style="margin-top:50px;"  title="Facebook">
-<img src="img/insta-icon.png" class="img-circle" style="margin-top:50px;" title="instagram">
-<img src="img/youtube-icon.png" class="img-circle" style="margin-top:50px;" title="Youtube">
-<img src="img/twitter-icon.png" class="img-circle" style="margin-top:50px;" title="Twitter"></center>
-</div>
-
-</div>
-</div>
-</div>
-
-
-
-
-<div class="container1">
-<div class="row">
-<div class="col-md-4 col-lg-4 col-sm-4">
-</div>
-<div class="col-md-4 col-lg-4 col-sm-4">
-<center>
-<h1 style="font-family:Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif; color:#06F; font-size:20px; margin-left:14px; margin-top:10px;" title="Al-Haq Scholar's Academy">ISLAMIC EDUCATION FOR MALE AND FEMALE</h1>
-</center>
-</div>
-<div class="col-md-4 col-lg-4 col-sm-4">
-</div>
-</div>
-</div>
-
-<header>
+        <div class="row mt-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+           <a href="index.php"> <img src="images/logo.jpg" class="logo rounded-circle" alt="logo"></a>
+            </div>
+           <div class="col-md-4"></div>
+            
+        </div>
+    </div>
 <div class="container">
-<div class=" col-md-12 col-lg-12 col-sm-12 ">
-<div class="navbar-header">
-	<button type="button" class="navbar-toggle collapsed btn btn-default bnt1"  data-toggle="collapse" data-target="#abc" >
-       <i class="fa fa-bars" aria-hidden="true" ></i>
-    </button>
-</div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item style">
+                        <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">  تمام زمرہ جات </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">ایمانیات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">عقائد</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">عبادات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-5" role="tab">معاملات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-6" role="tab">معاشرت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">مالیات </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-8" role="tab">تصوف </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-9" role="tab">سیرت </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-10" role="tab">متفرق مسائل </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tabs-11" role="tab">اسلامی تاریخ </a>
+                    </li>
+                    
 
-<div class="collapse navbar-collapse" id="abc">
+                </ul><!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                    <div class="container">
+  
+            <p class="media-heading mt-5 mb-5">تمام زمرہ جات</p>
+        
+        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                while ($row = $result->fetch_assoc()) {
 
-<nav class="pull-right nav1">
-<ul class="nav navbar-nav">
-<li><a href="index.php"  class="">HOME</a></li>
-<li>
-<a href="Dars-e-Nizami.php" style="background-color:#03F;">DARS E NIZAMI</a>
-</li>
-<li>
-<a href="Books.php" style="background-color:#03F;">BOOKS<span class=""></span></a>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM questions";
+                $result = $con->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-</li>
-<li class="dropdown">
-<a  class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#03F;">FATWAJAT<span class="caret"></span></a>
-<ul class="dropdown-menu drp1">
-<li><a href="OnlineFatwa.php" style="background-color:#FFF; color:#000;">Online Fatwa</a></li>
+                    <p class=" fatwas pr-4"><a style="text-decoration: none;" href="FatwaDetail.php?question_id=<?php echo $row["id"] ?>"><?php echo $row["Questions"] ?></a></p>
+                <?php
+                }
+                ?>
+            </div>
 
-<li><a href="Fatwa.php" style="background-color:#FFF; color:#000;">Fatwa</a></li>
-
-</ul>
-</li>
-<li><a href="Literature.php" style="font-family: UnitedSans,tahoma,helvetica,arial,sans-serif!important; font-size:19px; ">LITERATURE</a></li>
-
-
-<li>
-<a href="#" style="background-color:#03F;">COURSES</a>
-</li>
-s<li><a href="media.php" style="font-family: UnitedSans,tahoma,helvetica,arial,sans-serif!important; font-size:19px; ">MEDIA</a></li>
-<li><a href="Events.php" style="font-family: UnitedSans,tahoma,helvetica,arial,sans-serif!important; font-size:19px; ">EVENTS</a></li>
-
-<li><a href="aboutUs.php" style="font-family: UnitedSans,tahoma,helvetica,arial,sans-serif!important; font-size:14px; ">About Us</a></li>
-
-</ul>
-</nav>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</header>
-</div>
-<div style="background-color:#efefef;">
-<div class="content">	
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div style="font-size: 30px;
-    padding-bottom: 15px;
-    color: #fff;
-    text-align: center;
-    font-family: 'NafeesWeb', serif;">
-<center>
-      <p>دارالافتاء </p>
-      <h1> فَاسْأَلُوا أَهْلَ الذِّكْرِ إِنْ كُنْتُمْ لَا تَعْلَمُونَ </h1>
-      <br>
-      
-                
- 
-	
-      </center>
-</div>
-</div>  
-</div>
-</div>
-</div>
-<br>
-<br>
-<div class="content8">
-<div class="container">
-<div class="row">
-
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-<center>
-<div class="col-md-2 col-lg-2 col-sm-2">
- <input type="submit" value="مزید" class="btn btn-large" />
-</div>
-</center>
-
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-<center>
-<div class="col-md-2 col-lg-2 col-sm-2">
- <input type="submit" value="مزید" class="btn btn-large" />
-</div>
-</center>
-
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-<center>
-<div class="col-md-2 col-lg-2 col-sm-2">
- <input type="submit" value="مزید" class="btn btn-large" />
-</div>
-</center>
-
-<div class="col-md-1 col-lg-1 col-sm-1">
-</div>
-</div>
-</div>
-</div>
-<br>
-<br>
-<br>
-</div>
-
-<!----------------------11-->
-<br>
-<br>
-<div class="content9">
-<div class="container">
-<div class="row">
-<center>
-<div class="col-md-12 col-lg-12 col-sm-12">
-<b><h1 style="color: #00aeef; font-size:45px; font-family: 'NafeesWeb', 'Open Sans', sans-serif;">اہم زمرہ جات</h1></b>
-</div>
-</center>
-</div>
-</div>
-</div>
-
-<!--------->
-
-<br>
-<div class="content10">
-<div class="container">
-<div class="row">
-
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Eman.png" class="img-responsive">
-<a href="FatwasEman.php" style="text-decoration:none;"><center><h3>ایمانیات</h3></center></a>
-
-</div>
-</div>
-
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Aqaid.png" class="img-responsive">
-<a href="FatwasAkeda.php" style="text-decoration:none;"><center><h3>عقائد</h3></center></a>
-
-</div>
-</div>
-
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Fiqa-aur-usool-e-Fiqa.png" class="img-responsive">
-<a href="FatwasFiqAndOsulfiq.php" style="text-decoration:none;"><center><h3>فقہ اور اصول فقہ</h3></center></a>
-
-</div>
-</div>
-
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Muamlaat.png" class="img-responsive">
-<a href="FatwasMouamlat.php" style="text-decoration:none;"><center><h3>معاملات</h3></center></a>
-
-</div>
-</div>
+        </div>
+    </div>
+                    </div>
 
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Jadid-FIQHI-MASAAIL.png" class="img-responsive">
-<a href="FatwasJadedFiqMasil.php" style="text-decoration:none;"><center><h3>جدید فقہی مسائل</h3></center></a>
+                    <!-- Yaha se ایمانیات Start ho rha hn -->
 
-</div>
-</div>
+                    <div class="tab-pane" id="tabs-2" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">ایمانیات</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories` = 'ایمانیات' ";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Islamic-History.png" class="img-responsive">
-<a href="FatwasIslamAndTareekh.php"style="text-decoration:none;"><center><h3>اسلامی تاریخ</h3></center></a>
+            <p class=" fatwas pr-4"><a style="text-decoration: none;" href="FatwaDetail.php?question_id=<?php echo $row["id"] ?>"><?php echo $row["Questions"] ?></a></p>
 
-</div>
-</div>
+                <?php
+                }
+                ?>
+            </div>
 
-</div>
-</div>
-</div>
-<br>
+        </div>
+                        
 
-<!----------------->
+                    </div>
 
+                    <!-- Yaha se عقائد Start ho rha hn -->
 
-<div class="content11">
-<div class="container">
-<div class="row">
+                    <div class="tab-pane" id="tabs-3" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">عقائد</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Ibadat.png" class="img-responsive">
-<a href="FatwasEbadat.php" style="text-decoration:none;"><center><h3>عبادات</h3></center></a>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='عقائد'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-</div>
-</div>
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Sirat.png" class="img-responsive">
-<a href="FatwasSeerat.php" style="text-decoration:none;"><center><h3>سیرت</h3></center></a>
+        </div>
+                    </div>
+                    <!-- Yaha se عبادات Start ho rha hn -->
 
-</div>
-</div>
+                    <div class="tab-pane" id="tabs-4" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5"> عبادات</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/NIZAM-E-MALIAT.png" class="img-responsive">
-<a href="FatwasMaliyat.php" style="text-decoration:none;"><center><h3>مالیات</h3></center></a>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='عبادات'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-</div>
-</div>
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/MUASHRT.png" class="img-responsive">
-<a href="FatwasMuashrat.php" style="text-decoration:none;"><center><h3>معاشرت</h3></center></a>
+        </div>
+                    </div>
+                    <!-- Yaha se معاملات Start ho rha hn -->
 
-</div>
-</div>
+                    <div class="tab-pane" id="tabs-5" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">معاملات</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='معاملات'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Wirasat-ki-Taqseem.png" class="img-responsive">
-<a href="FatwasWerasat.php" style="text-decoration:none;"><center><h3>تقسیمِ وراثت</h3></center></a>
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
-</div>
-</div>
+        </div>
+                    </div>
 
+                    <!-- Yaha se معاشرت Start ho rha hn -->
 
-<div class="col-md-2 col-lg-2 col-sm-2">
-<div>
-<img src="images/Tswuf.png" class="img-responsive">
-<a href="FatwasTasaouf.php" style="text-decoration:none;"><center><h3>تصوف</h3></center></a>
+                    <div class="tab-pane" id="tabs-6" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">معاشرت</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
-</div>
-</div>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='معاشرت'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
-</div>
-</div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<!---------------------------->
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
+        </div>
+                    </div>
+                    <!-- Yaha se مالیات Start ho rha hn -->
 
+                    <div class="tab-pane" id="tabs-7" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">مالیات</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
-<br>
-<br>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='مالیات'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
-<!---------------------->
+        </div>
+                    </div>
+                    <!-- Yaha se تصوف Start ho rha hn -->
 
+                    <div class="tab-pane" id="tabs-8" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">تصوف</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
 
-<div class="col-lg-12">
-<address style="text-align:center; color:#03F;">
-  © 2014 Alhaq Scholar Acadmey and Book store, Pakistan Inc. All rights reserved. <br>
-  Designed By Zarak khan.
-  </address>
-  <br><br>
-</div>
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='تصوف'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
 
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
 
-</main>
+        </div>
+                    </div>
+                    <!-- Yaha se سیرت Start ho rha hn -->
 
+                    <div class="tab-pane" id="tabs-9" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">سیرت</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='سیرت'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
+
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+
+        </div>
+                    </div>
+                    <!-- Yaha se متفرق مسائل Start ho rha hn -->
+
+                    <div class="tab-pane" id="tabs-10" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">متفرق مسائل</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='متفرق مسائل'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
+
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+
+        </div>
+                    </div>
+                    <!-- Yaha se اسلامی تاریخ Start ho rha hn -->
+
+                    <div class="tab-pane" id="tabs-11" role="tabpanel">
+                        <p class="media-heading mt-5 mb-5">اسلامی تاریخ</p>
+                        <div class="row">
+            <div class="col-md-3  sidebar">
+                <h3>متعلقہ سوالات</h3>
+                <?php
+                $sql = "SELECT * FROM questions ORDER BY id DESC LIMIT 5";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+
+                ?>
+                    <p class="sidebarquestions"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-8 rightbox">
+                <?php
+                $sql = "SELECT * FROM `questions` WHERE `categories`='اسلامی تاریخ'";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                ?>
+
+                    <p class=" fatwas pr-4"><?php echo $row["Questions"] ?></p>
+                <?php
+                }
+                ?>
+            </div>
+
+        </div>
+                    </div>
+                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <script>
+    $(document).ready(function () {
+        $(".readmore").click(function () {
+            $(".more-info").toggle("slow");
+        });
+        $(".readmore1").click(function () {
+            $(".more-info1").toggle("slow");
+        });
+        $(".readmore2").click(function () {
+            $(".more-info2").toggle("slow");
+        });
+    });
+</script> -->
+
 </html>
